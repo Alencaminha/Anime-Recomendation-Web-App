@@ -1,45 +1,12 @@
-import * as database from "./database/database.js";
+import { createTable } from "./database/user.js";
 import express, { json } from "express";
+import router from "./routes.js";
 
 const app = express();
 app.use(json());
+app.use(router);
 
-app.get("/", (req, res) => {
-    res.send("Teste");
-});
-
-database.createTable();
-
-app.post("/createuser", (req, res) => {
-    database.createUser(req.body);
-    res.json({
-        "statusCode": 200
-    });
-});
-
-app.get("/readuser", async (req, res) => {
-    let user = await database.readUser(req.body.id);
-    res.json(user);
-});
-
-app.put("/updateuser", (req, res) => {
-    if (!req.body.id) {
-        res.json({
-            "statusCode": 400,
-            "msg": "Id is missing"
-        });
-    } else {
-        database.updateUser(req.body);
-        res.json({
-            "statusCode": 200
-        });
-    }
-});
-
-app.delete("/deleteuser", async (req, res) => {
-    let user = await database.deleteUser(req.body.id);
-    res.json(user);
-});
+createTable();
 
 app.listen(3000, () => {
     console.log("Teste api funcionando!");
