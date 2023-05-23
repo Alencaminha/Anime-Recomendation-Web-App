@@ -20,8 +20,20 @@ export async function createUser(user) {
     });
 };
 
+export async function readUser(id) {
+    return openDb().then(db => {
+        return db.get("SELECT * FROM User WHERE id = ?", [id]).then(res => res);
+    });
+};
+
 export async function updateUser(user) {
     openDb().then(db => {
         db.run("UPDATE User SET username = ?, password = ?, email = ? WHERE id = ?", [user.username, user.password, user.email, user.id]);
+    });
+};
+
+export async function deleteUser(id) {
+    return openDb().then(db => {
+        return db.get("DELETE FROM User WHERE id = ?", [id]).then(res => res);
     });
 };

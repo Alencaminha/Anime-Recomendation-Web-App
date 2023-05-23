@@ -17,6 +17,11 @@ app.post("/createuser", (req, res) => {
     });
 });
 
+app.get("/readuser", async (req, res) => {
+    let user = await database.readUser(req.body.id);
+    res.json(user);
+});
+
 app.put("/updateuser", (req, res) => {
     if (!req.body.id) {
         res.json({
@@ -29,6 +34,11 @@ app.put("/updateuser", (req, res) => {
             "statusCode": 200
         });
     }
+});
+
+app.delete("/deleteuser", async (req, res) => {
+    let user = await database.deleteUser(req.body.id);
+    res.json(user);
 });
 
 app.listen(3000, () => {
