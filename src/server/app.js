@@ -1,4 +1,4 @@
-import { createTable } from "./database/user.js";
+import { createTable } from "./database/database.js";
 import express, { json } from "express";
 import router from "./routes.js";
 

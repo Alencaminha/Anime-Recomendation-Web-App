@@ -1,13 +1,10 @@
 import { Router } from "express";
-import * as database from "./database/user.js";
+import * as database from "./database/database.js";
 
 const router = Router();
 
 router.get("/", (req, res) => {
-    res.json({
-        "statusCode": 200,
-        "msg": "Api funcionando!"
-    });
+    res.render("index");
 });
 
 router.post("/createuser", database.createUser);

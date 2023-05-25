@@ -26,7 +26,7 @@ export async function createUser(req, res) {
 
 export async function readUser(req, res) {
     openDb().then(db => {
-        db.get("SELECT * FROM User WHERE id = ?", [req.body.id]).then(user => res.json(user));
+        db.get("SELECT * FROM User WHERE username = ?", [req.body.username]).then(user => res.json(user));
     });
 };
 
