@@ -1,16 +1,13 @@
 loginAuthentication = () => {
-    let insertedUsername = document.getElementById("usernameLogin").value;
+    let loginUsername = document.getElementById("loginUsername");
 
     fetch("http://localhost:3000/readuser", {
         method: "POST",
-        mode: "cors",
-        cache: "no-cache",
-        credentials: "same-origin",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            username: insertedUsername
+            username: loginUsername.value
         })
     })
     .then(res => res.json())
@@ -18,9 +15,11 @@ loginAuthentication = () => {
 };
 
 loginAuthorization = (data) => {
-    let insertedPassword = document.getElementById("passwordLogin").value;
+    let loginPassword = document.getElementById("loginPassword");
 
-    if (insertedPassword == data.password) {
+    if (loginPassword.value == data.password) {
         window.location.href = "profile.html";
+    } else {
+        alert("Usuário e/ou senha está incorreto!");
     }
 }

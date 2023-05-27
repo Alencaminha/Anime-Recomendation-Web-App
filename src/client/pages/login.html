@@ -4,40 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
     <title>Login</title>
 </head>
 <body>
     <div class="login">
         <h1>Login</h1>
-            <div class="username">
-                <label>Username</label>
-                <input type="text" id="usernameLogin" placeholder="Enter your username">
-            </div>
-            <div class="password">
-                <label>Password</label>
-                <input type="password" id="passwordLogin" placeholder="Enter your password">
-            </div>
-            <button type="submit" onclick="loginAuthentication()">Entrar</button>
+        <div class="username">
+            <label>Username</label>
+            <input type="text" id="loginUsername" placeholder="Enter your username">
+        </div>
+        <div class="password">
+            <label>Password</label>
+            <input type="password" id="loginPassword" placeholder="Enter your password">
+        </div>
+        <button onclick="loginAuthentication()">Entrar</button>
     </div>
-    <div class="signup">
-        <form action="">
-            <h1>Cadastro</h1>
-            <div class="username">
-                <label>Username</label>
-                <input type="text" placeholder="Enter your username">
-            </div>
-            <div class="email">
-                <label>E-mail</label>
-                <input type="text" placeholder="Enter your e-mail">
-            </div>
-            <div class="password">
-                <label>Password</label>
-                <input type="password" placeholder="Enter your password">
-            </div>
-            <button type="submit" onclick="signUpValidation()">Cadastrar-se</button>
-        </form>
-    </div>
-    <script src="../script.js"></script>
+    <span><a href="signup.html">Não tem conta?</a></span>
+    <script src="../scripts/loginScript.js"></script>
 </body>
 </html>
