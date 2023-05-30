@@ -13,20 +13,20 @@
             <h1>Cadastro</h1>
             <div class="username">
                 <label>Username</label>
-                <input type="text" id="signupUsername" placeholder="Enter a username">
+                <input type="text" id="signupUsername" placeholder="Enter a username" required>
             </div>
             <div class="email">
                 <label>E-mail</label>
-                <input type="text" id="signupEmail" placeholder="Enter an e-mail">
+                <input type="text" id="signupEmail" placeholder="Enter an e-mail" required>
             </div>
             <div class="password">
                 <label>Password</label>
-                <input type="password" id="signupPassword" placeholder="Enter a password">
+                <input type="password" id="signupPassword" placeholder="Enter a password" required>
             </div>
-            <button type="button" onclick="signUpValidation()">Cadastrar-se</button>
+            <button type="button" onclick="signUp()">Cadastrar-se</button>
         </form>
     </div>
     <span><a href="login.html">Lembrou que tem conta?</a></span>
-    <script src="../scripts/signupScript.js"></script>
+    <script src="../scripts/loginSignup.js"></script>
 </body>
 </html>

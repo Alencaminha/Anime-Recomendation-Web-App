@@ -2,9 +2,9 @@
   "name": "animerecomendationwebapp",
   "version": "1.0.0",
   "description": "",
-  "main": "src/server/app.js",
+  "main": "src/server/server.js",
   "scripts": {
-    "dev": "nodemon src/server/app.js",
+    "dev": "nodemon src/server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
