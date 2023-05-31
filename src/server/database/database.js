@@ -11,6 +11,7 @@ async function openDb() {
 export async function createTable() {
     openDb().then(db => {
         db.exec("CREATE TABLE IF NOT EXISTS User (id INTEGER PRIMARY KEY, username TEXT, password TEXT, email TEXT)");
+        // TODO create some generic users + admin for when the User table is created
     });
 };
 
@@ -30,10 +31,30 @@ export async function readUser(req, res) {
     });
 };
 
-export async function updateUser(req, res) {
+export async function updateUsername(req, res) {
     let user = req.body;
     openDb().then(db => {
-        db.run("UPDATE User SET username = ?, password = ?, email = ? WHERE id = ?", [user.username, user.password, user.email, user.id]);
+        db.run("UPDATE User SET username = ? WHERE username = ?", [user.newusername, user.oldusername]);
+    });
+    res.json({
+        "statusCode": 200
+    });
+};
+
+export async function updatePassword(req, res) {
+    let user = req.body;
+    openDb().then(db => {
+        db.run("UPDATE User SET password = ? WHERE username = ?", [user.password, user.username]);
+    });
+    res.json({
+        "statusCode": 200
+    });
+};
+
+export async function updateEmail(req, res) {
+    let user = req.body;
+    openDb().then(db => {
+        db.run("UPDATE User SET email = ? WHERE username = ?", [user.email, user.username]);
     });
     res.json({
         "statusCode": 200
@@ -42,7 +63,7 @@ export async function updateUser(req, res) {
 
 export async function deleteUser(req, res) {
     openDb().then(db => {
-        db.get("DELETE FROM User WHERE id = ?", [req.body.id]).then(res => res);
+        db.get("DELETE FROM User WHERE username = ?", [req.body.username]).then(res => res);
     });
     res.json({
         "statusCode": 200

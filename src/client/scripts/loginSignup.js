@@ -37,14 +37,14 @@ loginAuthentication = () => {
         })
     })
     .then(res => res.json())
-    .then(data => loginAuthorization(data.password));
+    .then(data => loginAuthorization(data));
 };
 
-loginAuthorization = (password) => {
+loginAuthorization = (data) => {
     loginPassword = document.getElementById("loginPassword").value;
 
-    if (loginPassword == password) {
-        sessionStorage.setItem("loggedUser", loginUsername);
+    if (loginPassword == data.password) {
+        sessionStorage.setItem("loggedUser", data.username);
         window.location.href = "profile.html";
     } else {
         alert("Usuário e/ou senha está incorreto!");

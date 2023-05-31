@@ -6,4 +6,6 @@ window.onload = () => {
     }
 }
 
-document.getElementById("usernameIdentification").innerHTML = "Olá, " + loggedUser;
+if (window.location.pathname == '/src/client/pages/profile.html') {
+    document.getElementById("usernameIdentification").innerHTML = "Olá, " + loggedUser;
+}

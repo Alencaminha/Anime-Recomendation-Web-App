@@ -12,21 +12,26 @@
         <button><a href="../../../index.html">Sair do sistema</a></button>
         <button><a href="profile.html">Voltar ao perfil</a></button>
     </header>
-    <form action="put">
-        <div class="txt_field">
-            <label>Alterar username</label>
-            <input type="text">
+    <div class="alterUserData">
+        <h3>Alterar dados do usuário</h3>
+        <div class="container">
+            <label>Novo nome de usuário</label>
+            <input type="text" id="altUsername">
+            <button onclick="alterUserData('username', document.getElementById('altUsername'))">Alterar</button>
         </div>
-        <div class="txt_field">
-            <label>Alterar e-mail</label>
-            <input type="text">
+        <div class="container">
+            <label>Novo e-mail</label>
+            <input type="text" id="altEmail">
+            <button onclick="alterUserData('email', document.getElementById('altEmail'))">Alterar</button>
         </div>
-        <div class="txt_field">
-            <label>Alterar password</label>
-            <input type="text">
+        <div class="container">
+            <label>Nova senha</label>
+            <input type="password" id="altPassword">
+            <button onclick="alterUserData('password', document.getElementById('altPassword'))">Alterar</button>
         </div>
-        <input type="submit" value="Alterar">
-    </form>
+    </div>
+    <button id="deleteUserButton" onclick="deleteAccount()">Deletar conta</button>
     <script src="../scripts/main.js"></script>
+    <script src="../scripts/configurations.js"></script>
 </body>
 </html>

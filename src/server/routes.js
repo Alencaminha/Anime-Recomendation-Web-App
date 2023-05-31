@@ -7,7 +7,9 @@ router.use(cors());
 
 router.post("/createuser", database.createUser);
 router.post("/readuser", database.readUser);
-router.put("/updateuser", database.updateUser);
+router.put("/updateusername", database.updateUsername);
+router.put("/updatepassword", database.updatePassword);
+router.put("/updateemail", database.updateEmail);
 router.delete("/deleteuser", database.deleteUser);
 
 export default router;
