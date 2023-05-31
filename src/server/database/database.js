@@ -11,7 +11,15 @@ async function openDb() {
 export async function createTable() {
     openDb().then(db => {
         db.exec("CREATE TABLE IF NOT EXISTS User (id INTEGER PRIMARY KEY, username TEXT, password TEXT, email TEXT)");
-        // TODO create some generic users + admin for when the User table is created
+    });
+};
+
+export async function populateUser() {
+    const query = "INSERT INTO User (username, password, email) VALUES (?, ?, ?)";
+    openDb().then(db => {
+        db.run(query, ["admin", "admin123", "admin@gmail.com"]);
+        db.run(query, ["random", "random169", "randomemail@gmail.com"]);
+        db.run(query, ["general", "general666", "general1969@gmail.com"]);
     });
 };
 
