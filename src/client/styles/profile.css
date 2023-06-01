@@ -1,0 +1,44 @@
+body {
+    font-family:'Computer Says No', Arial, sans-serif;
+    font-size: 107%;
+    background-image:url("../../../img/PERFIL\ .png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #D9D9D9;
+}
+
+button {
+    background-color:#D9D9D9;
+    font-family:'Computer Says No', Arial, sans-serif;
+    font-size: 97%;
+    padding: 7px 50px;
+    border: 7px solid transparent;
+    border-radius: 20px;
+}
+
+button:hover {
+    background-color: #EA81A7;
+}
+
+.input-box {
+    font-family:'Computer Says No', Arial, sans-serif;
+    font-size: 97%;
+    width: 600px;
+    padding: 7px 50px;
+    border: 7px solid #D9D9D9;
+    border-radius: 20px;
+}
+
+.output-box {
+    font-family:'Computer Says No', Arial, sans-serif;
+    font-size: 97%;
+    width: 600px;
+    padding: 7px 50px;
+    border: 7px solid #D9D9D9;
+    border-radius: 20px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
