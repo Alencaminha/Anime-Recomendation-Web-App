@@ -50,3 +50,15 @@ loginAuthorization = (data) => {
         alert("Usuário e/ou senha está incorreto!");
     }
 }
+
+document.getElementById("loginUsername").addEventListener("keypress", (event)=> {
+    if (event.key === "Enter") {
+        loginAuthentication();
+    }
+});
+
+document.getElementById("loginPassword").addEventListener("keypress", (event)=> {
+    if (event.key === "Enter") {
+        loginAuthentication();
+    }
+});
