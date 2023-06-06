@@ -2,10 +2,12 @@
     display: block;
     text-align: center;
 }
+
 h3{
     text-align: left;
     padding: 0.5rem 3rem;
 }
+
 .bt_cadastro {
     display: flex;
     align-items: center;
@@ -16,7 +18,7 @@ h3{
 .bt_cadastro a{
     text-decoration: none;
     padding: 0.5rem 1rem;
-} 
+}
 
 @media screen and (min-width: 600px){
     .bt_cadastro{
@@ -29,5 +31,5 @@ h3{
     .bt_cadastro a{
         text-decoration: none;
         padding: 0.5rem 1rem;
-    } 
+    }
 }
