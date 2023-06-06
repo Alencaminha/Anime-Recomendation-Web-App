@@ -1,7 +1,7 @@
 body {
     font-family:'Computer Says No', Arial, sans-serif;
     font-size: 107%;
-    background-image:url("/Anime-Recomendation-Web-App/img/backgroud.png");
+    background-image:url("../../../img/main-wallpaper.png");
 }
 
 .botao_home{
@@ -42,7 +42,7 @@ button{
 }
 
 @media screen and (min-width: 600px){
-    .nav_bar{
+    .nav_bar {
         display: flex;
         justify-content: space-between;
         padding: 1.5rem 6rem;
