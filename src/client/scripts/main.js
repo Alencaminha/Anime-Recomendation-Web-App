@@ -1,5 +1,9 @@
 document.getElementById("usernameIdentification").innerHTML = "Olá, " + sessionStorage.getItem("loggedUser");
 
+quit = () => {
+    sessionStorage.setItem("loggedUser", null);
+}
+
 searchRecommendation = () => {
     let anime = document.getElementById("inputtedAnime").value;
     // This fetch serves to get the inputted anime's MAL id
