@@ -18,7 +18,20 @@ body {
 .img_logo{
     width: 40%;
 }
+.signup label{
+    padding: 1.0rem 1.0rem;
+}
+.bt_retorna_pag {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 3rem;
+    justify-content: space-between;
+}
 
+.bt_retorna_pag a{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
 
 button{
     background-color:#eaa1bc;
@@ -34,7 +47,13 @@ button{
         justify-content: space-between;
         padding: 1.5rem 6rem;
     }
-    
+    .bt_retorna_pag{
+        justify-content: center;
+    }
+    .bt_retorna_pag a{
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+    } 
     button{
         background-color:#eaa1bc;
         padding: 7px 25px;
