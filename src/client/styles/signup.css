@@ -1,26 +1,11 @@
 body {
-    font-family:'Computer Says No', Arial, sans-serif;
-    font-size: 107%;
-    background-image:url("../../../img/LOGIN.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     position: absolute;
     left: 38%;
-    top:50%;
+    top: 50%;
 }
 
 button {
-    background-color:#d9d9d9;
-    font-family:'Computer Says No', Arial, sans-serif;
-    font-size: 77%;
     padding: 7px 50px;
-    border: 7px solid transparent;
-    border-radius: 20px;
     margin-top: 1em;
-    display:block;
-
-}
-
-button:hover {
-    background-color: #EA81A7;
+    display: block;
 }

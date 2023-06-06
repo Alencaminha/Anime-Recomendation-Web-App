@@ -1,24 +1,3 @@
-body {
- font-family:'Computer Says No', Arial, sans-serif;
- font-size: 107%;
- background-image:url("../../../img/CONF2.png");
- background-repeat: no-repeat;
- background-size: cover;
-}
-
-button {
-    background-color:#D9D9D9;
-    font-family:'Computer Says No', Arial, sans-serif;
-    font-size: 97%;
-    padding: 7px 50px;
-    border: 7px solid transparent;
-    border-radius: 20px;
-}
-
-button:hover {
-    background-color: #EA81A7;
-}
-
 .txt_field {
     font-family:'Computer Says No', Arial, sans-serif;
     font-size: 97%;
@@ -31,9 +10,4 @@ button:hover {
     right: 62%;
     top: 43%;
     transform: translate(38%, -15%);
-}
-
-a {
-    color: black;
-    text-decoration: none;
 }
