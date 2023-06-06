@@ -23,3 +23,10 @@ searchRecommendation = () => {
         });
     });
 }
+
+copyContent = () => {
+    let copyText = document.getElementById("outputtedAnime");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+}
