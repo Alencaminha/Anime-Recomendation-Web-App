@@ -1,13 +1,33 @@
-body {
-    position: absolute;
-    left: 38%;
-    top: 50%;
+.login{
+    display: block;
+    text-align: center;
+}
+h3{
+    text-align: left;
+    padding: 0.5rem 3rem;
+}
+.bt_cadastro {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 3rem;
+    justify-content: space-between;
 }
 
-button {
-    padding: 7px 50px;
-    margin-top: 1em;
-    right: 38%;
-    top: 70%;
-    transform: translate(38%, -15%);
+.bt_cadastro a{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+} 
+
+@media screen and (min-width: 600px){
+    .bt_cadastro{
+        justify-content: center;
+    }
+    h3{
+        text-align: center;
+        padding: 0.5rem 3rem;
+    }
+    .bt_cadastro a{
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+    } 
 }

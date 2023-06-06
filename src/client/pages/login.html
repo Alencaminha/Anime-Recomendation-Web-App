@@ -9,6 +9,20 @@
     <title>Login</title>
 </head>
 <body>
+    <header>
+        <nav class="nav_bar">
+            <div class="botao_home">
+                <button><a class="bt_home" href="/index.html" target="_blank">HOME</a></button>
+            </div>
+            <div class="logo">
+                <a href="/index.html" target="_blank">
+                    <img class="img_logo" src="/Anime-Recomendation-Web-App/img/LOGO.png" alt="Logo do site onde pode-se ler Views Anime na cor preta">
+                </a>
+            </div>
+        </nav>
+    </header>
+    <h3>Entrar</h3>
+
     <div class="login">
         <div class="username">
             <label>USERNAME</label>
@@ -20,7 +34,10 @@
         </div>
         <button onclick="loginAuthentication()">Entrar</button>
     </div>
-    <span><a href="signup.html">Não tem conta?</a></span>
-    <script src="../scripts/loginSignup.js"></script>
+    <div id="botao_cadastro" class="bt_cadastro">
+        <h4 class="texto">Novo por aqui?</h4>
+        <span><a href="signup.html"><h4>Criar conta</h4></a></span>
+    </div>
+        <script src="../scripts/loginSignup.js"></script>
 </body>
 </html>
