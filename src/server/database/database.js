@@ -39,6 +39,12 @@ export async function readUser(req, res) {
     });
 };
 
+export async function validateLogin(req, res) {
+    openDb().then(db => {
+        db.get("SELECT * FROM User WHERE username = ?", [req.body.username]).then(user => res.json(user));
+    });
+};
+
 export async function updateUsername(req, res) {
     let user = req.body;
     openDb().then(db => {

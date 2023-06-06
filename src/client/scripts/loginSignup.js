@@ -1,64 +1,69 @@
-let signupUsername;
-let signupPassword;
-let signupEmail;
-let loginUsername;
-let loginPassword;
+const signupUsername = document.getElementById("signupUsername");
+const signupPassword = document.getElementById("signupPassword");
+const signupEmail = document.getElementById("signupEmail");
+const loginUsername = document.getElementById("loginUsername");
+const loginPassword = document.getElementById("loginPassword");
+
+showPassword = () => {
+    if (loginPassword.type === "password") {
+        loginPassword.type = "text";
+    } else {
+        loginPassword.type = "password";
+    }
+}
 
 signUp = () => {
-    signupUsername = document.getElementById("signupUsername").value;
-    signupPassword = document.getElementById("signupPassword").value;
-    signupEmail = document.getElementById("signupEmail").value;
-
     fetch("http://localhost:3000/createuser", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            username: signupUsername,
-            password: signupPassword,
-            email: signupEmail
+            username: signupUsername.value,
+            password: signupPassword.value,
+            email: signupEmail.value
         })
     });
     // TODO Add fields validation
     window.location.href = "login.html";
 }
 
-loginAuthentication = () => {
-    loginUsername = document.getElementById("loginUsername").value;
-
-    fetch("http://localhost:3000/readuser", {
+login = () => {
+    fetch("http://localhost:3000/validatelogin", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            username: loginUsername
+            username: loginUsername.value
         })
     })
     .then(res => res.json())
-    .then(data => loginAuthorization(data));
+    .then(data => {
+        if (loginPassword.value == data.password) {
+            sessionStorage.setItem("loggedUser", data.username);
+            window.location.href = "profile.html";
+        } else {
+            alert("Usuário e/ou senha está incorreto!");
+        }
+    });
 };
 
-loginAuthorization = (data) => {
-    loginPassword = document.getElementById("loginPassword").value;
+const loginArray = [loginUsername, loginPassword];
+const signupArray = [signupUsername, signupPassword, signupEmail];
 
-    if (loginPassword == data.password) {
-        sessionStorage.setItem("loggedUser", data.username);
-        window.location.href = "profile.html";
-    } else {
-        alert("Usuário e/ou senha está incorreto!");
-    }
-}
-
-document.getElementById("loginUsername").addEventListener("keypress", (event)=> {
-    if (event.key === "Enter") {
-        loginAuthentication();
-    }
+loginArray.forEach(element => {
+    element.addEventListener("keypress", event => {
+        if (event.key === "Enter") {
+            login();
+        }
+    });
 });
 
-document.getElementById("loginPassword").addEventListener("keypress", (event)=> {
-    if (event.key === "Enter") {
-        loginAuthentication();
-    }
+signupArray.forEach(element => {
+    element.addEventListener("keypress", event => {
+        if (event.key === "Enter") {
+            signUp();
+        }
+    });
 });
