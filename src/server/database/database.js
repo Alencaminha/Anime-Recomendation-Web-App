@@ -41,7 +41,15 @@ export async function readUser(req, res) {
 
 export async function validateLogin(req, res) {
     openDb().then(db => {
-        db.get("SELECT * FROM User WHERE username = ?", [req.body.username]).then(user => res.json(user));
+        db.get("SELECT * FROM User WHERE username = ? AND password = ?", [req.body.username, req.body.password])
+        .then(user => {
+            // User was found and exists with this username and matching password
+            if (user) {
+                res.json({"authenticated": true});
+            } else {
+                res.json({"authenticated": false});
+            }
+        });
     });
 };
 

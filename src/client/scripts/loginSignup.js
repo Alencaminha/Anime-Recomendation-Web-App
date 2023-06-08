@@ -35,13 +35,14 @@ login = () => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            username: loginUsername.value
+            username: loginUsername.value,
+            password: loginPassword.value
         })
     })
     .then(res => res.json())
     .then(data => {
-        if (loginPassword.value == data.password) {
-            sessionStorage.setItem("loggedUser", data.username);
+        if (data.authenticated) {
+            sessionStorage.setItem("loggedUser", loginUsername.value);
             window.location.href = "profile.html";
         } else {
             alert("Usuário e/ou senha está incorreto!");
