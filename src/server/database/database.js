@@ -10,16 +10,21 @@ async function openDb() {
 
 export async function createTable() {
     openDb().then(db => {
-        db.exec("CREATE TABLE IF NOT EXISTS User (id INTEGER PRIMARY KEY, username TEXT, password TEXT, email TEXT)");
+        db.exec(`CREATE TABLE IF NOT EXISTS User (id INTEGER PRIMARY KEY,
+                                                    username TEXT NOT NULL,
+                                                    password TEXT NOT NULL,
+                                                    email TEXT NOT NULL,
+                                                    received_anime_id INTEGER,
+                                                    recommended_anime_id INTEGER)`);
     });
 };
 
 export async function populateUser() {
-    const query = "INSERT INTO User (username, password, email) VALUES (?, ?, ?)";
+    const query = "INSERT INTO User (username, password, email, received_anime_id, recommended_anime_id) VALUES (?, ?, ?, ?, ?)";
     openDb().then(db => {
-        db.run(query, ["admin", "admin123", "admin@gmail.com"]);
-        db.run(query, ["random", "random169", "randomemail@gmail.com"]);
-        db.run(query, ["general", "general666", "general1969@gmail.com"]);
+        db.run(query, ["admin", "admin123", "admin@gmail.com", 20, 1]);
+        db.run(query, ["random", "random169", "randomemail@gmail.com", 20, 6702]);
+        db.run(query, ["general", "general666", "general1969@gmail.com", 20, 223]);
     });
 };
 
