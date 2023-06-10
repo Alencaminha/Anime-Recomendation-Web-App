@@ -23,9 +23,14 @@ signUp = () => {
             password: signupPassword.value,
             email: signupEmail.value
         })
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+        if (data.statusCode == 200) {
+            window.location.href = "login.html";
+        }
     });
-    // TODO Add fields validation
-    window.location.href = "login.html";
 }
 
 login = () => {
@@ -42,7 +47,7 @@ login = () => {
     .then(res => res.json())
     .then(data => {
         if (data.authenticated) {
-            sessionStorage.setItem("loggedUser", loginUsername.value);
+            sessionStorage.setItem("loggedUserId", data.id);
             window.location.href = "profile.html";
         } else {
             alert("Usuário e/ou senha está incorreto!");
@@ -50,21 +55,10 @@ login = () => {
     });
 };
 
-const loginArray = [loginUsername, loginPassword];
-const signupArray = [signupUsername, signupPassword, signupEmail];
-
-loginArray.forEach(element => {
+[loginUsername, loginPassword].forEach(element => {
     element.addEventListener("keypress", event => {
         if (event.key === "Enter") {
             login();
-        }
-    });
-});
-
-signupArray.forEach(element => {
-    element.addEventListener("keypress", event => {
-        if (event.key === "Enter") {
-            signUp();
         }
     });
 });

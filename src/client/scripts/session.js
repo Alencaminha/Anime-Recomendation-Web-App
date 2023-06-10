@@ -1,5 +1,5 @@
 window.onload = () => {
-    if (sessionStorage.getItem("loggedUser") == null) {
+    if (sessionStorage.getItem("loggedUserId") == null) {
         window.location.href = "login.html";
     }
 }

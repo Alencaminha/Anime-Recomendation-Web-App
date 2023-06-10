@@ -14,17 +14,17 @@ export async function createTable() {
                                                     username TEXT NOT NULL,
                                                     password TEXT NOT NULL,
                                                     email TEXT NOT NULL,
-                                                    received_anime_id INTEGER,
-                                                    recommended_anime_id INTEGER)`);
+                                                    input_id INTEGER,
+                                                    recommended_id INTEGER)`);
     });
 };
 
 export async function populateUser() {
-    const query = "INSERT INTO User (username, password, email, received_anime_id, recommended_anime_id) VALUES (?, ?, ?, ?, ?)";
+    const query = "INSERT INTO User (username, password, email) VALUES (?, ?, ?)";
     openDb().then(db => {
-        db.run(query, ["admin", "admin123", "admin@gmail.com", 20, 1]);
-        db.run(query, ["random", "random169", "randomemail@gmail.com", 20, 6702]);
-        db.run(query, ["general", "general666", "general1969@gmail.com", 20, 223]);
+        db.run(query, ["admin", "admin123", "admin@gmail.com"]);
+        db.run(query, ["random", "random169", "randomemail@gmail.com"]);
+        db.run(query, ["general", "general666", "general1969@gmail.com"]);
     });
 };
 
@@ -40,7 +40,7 @@ export async function createUser(req, res) {
 
 export async function readUser(req, res) {
     openDb().then(db => {
-        db.get("SELECT * FROM User WHERE username = ?", [req.body.username]).then(user => res.json(user));
+        db.get("SELECT * FROM User WHERE id = ?", [req.body.id]).then(user => res.json(user));
     });
 };
 
@@ -50,7 +50,7 @@ export async function validateLogin(req, res) {
         .then(user => {
             // User was found and exists with this username and matching password
             if (user) {
-                res.json({"authenticated": true});
+                res.json({"authenticated": true, "id": user.id});
             } else {
                 res.json({"authenticated": false});
             }

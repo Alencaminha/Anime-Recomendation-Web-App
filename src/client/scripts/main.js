@@ -1,7 +1,25 @@
-document.getElementById("usernameIdentification").innerHTML = "Olá, " + sessionStorage.getItem("loggedUser");
-
-quit = () => {
-    sessionStorage.setItem("loggedUser", null);
+window.onload = () => {
+    fetch("http://localhost:3000/readuser", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            id: sessionStorage.getItem("loggedUserId")
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("usernameIdentification").innerHTML = "Olá, " + data.username;
+        // For user input box
+        fetch(`https://api.jikan.moe/v4/anime/${data.input_id}/full`)
+        .then(res => res.json())
+        .then(data => {document.getElementById("inputtedAnime").value = data.data.title_english});
+        // For recommended anime box
+        fetch(`https://api.jikan.moe/v4/anime/${data.recommended_id}/full`)
+        .then(res => res.json())
+        .then(data => {document.getElementById("outputtedAnime").value = data.data.title_english});
+    });
 }
 
 searchRecommendation = () => {
@@ -29,8 +47,12 @@ searchRecommendation = () => {
 }
 
 copyContent = () => {
-    let copyText = document.getElementById("outputtedAnime");
+    const copyText = document.getElementById("outputtedAnime");
     copyText.select();
     copyText.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(copyText.value);
+}
+
+quit = () => {
+    sessionStorage.setItem("loggedUserId", null);
 }
