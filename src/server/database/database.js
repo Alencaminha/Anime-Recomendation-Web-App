@@ -58,10 +58,10 @@ export async function validateLogin(req, res) {
     });
 };
 
-export async function updateUsername(req, res) {
+export async function updateUser(req, res) {
     let user = req.body;
     openDb().then(db => {
-        db.run("UPDATE User SET username = ? WHERE username = ?", [user.newusername, user.oldusername]);
+        db.run("UPDATE User SET " + user.field + " = ? WHERE id = ?", [user.value, user.id]);
     });
     res.json({
         "statusCode": 200
@@ -90,7 +90,7 @@ export async function updateEmail(req, res) {
 
 export async function deleteUser(req, res) {
     openDb().then(db => {
-        db.get("DELETE FROM User WHERE username = ?", [req.body.username]).then(res => res);
+        db.get("DELETE FROM User WHERE id = ?", [req.body.id]).then(res => res);
     });
     res.json({
         "statusCode": 200

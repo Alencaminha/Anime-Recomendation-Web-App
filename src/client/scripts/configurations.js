@@ -1,78 +1,42 @@
-let username = sessionStorage.getItem("loggedUser");
+const userId = sessionStorage.getItem("loggedUserId");
 
-alterUserData = (data, source) => {
-    switch (data) {
-        case "username":
-            fetch("http://localhost:3000/updateusername", {
-                method: "PUT",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    newusername: source.value,
-                    oldusername: username
-                })
+alterUserData = (fieldToChange, element) => {
+    if (window.confirm("Are you sure you want to change this information?")) {
+        fetch("http://localhost:3000/updateuser", {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                field: fieldToChange,
+                value: element.value,
+                id: userId
             })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                sessionStorage.setItem("loggedUser", source.value);
-                source.value = "";
-            });
-            break;
-
-        case "password":
-            fetch("http://localhost:3000/updatepassword", {
-                method: "PUT",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    password: source.value,
-                    username: username
-                })
-            })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                source.value = "";
-            });
-            break;
-
-        case "email":
-            fetch("http://localhost:3000/updateemail", {
-                method: "PUT",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    email: source.value,
-                    username: username
-                })
-            })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                source.value = "";
-            });
-            break;
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            element.value = "";
+        });
     }
 }
 
 deleteAccount = () => {
-    fetch("http://localhost:3000/deleteuser", {
-                method: "DELETE",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    username: username
-                })
+    if (window.confirm("Are you sure you want to delete your account?")) {
+        fetch("http://localhost:3000/deleteuser", {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                id: userId
             })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                sessionStorage.setItem("loggedUser", null);
-                window.location.href = "index.html";
-            });
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            sessionStorage.setItem("loggedUserId", null);
+            window.location.href = "index.html";
+        });
+    }
 }
