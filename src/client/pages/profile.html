@@ -22,10 +22,21 @@
         <input type="text" id="inputtedAnime">
         <button onclick="searchRecommendation()">Enviar</button>
     </div>
-    <div class="output-box">
+    <br class="output-box">
         <span>O anime recomendado</span>
         <input type="text" id="outputtedAnime" readonly>
-        <button id="copyContentButton" onclick="copyContent()">Copy to clipboard</button>
+        <button id="copyContentButton" onclick="copyContent()">Copiar nome do Anime</button>
+        </br>
+        <span>Gênero</span>
+        <input type="text" id="animeGenre" readonly>
+        </br>
+        <span>Episódios</span>
+        <input type="text" id="animeEpisodes" readonly>
+        </br>
+        <span>Duração por epidódio</span>
+        <input type="text" id="animeEpDuration" readonly>
+        </br>
+        <img id="animeImage" alt="Recommended anime image" width="200" height="300">
     </div>
     <script src="../scripts/session.js"></script>
     <script src="../scripts/main.js"></script>

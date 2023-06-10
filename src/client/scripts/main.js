@@ -41,6 +41,10 @@ searchRecommendation = () => {
             .then(data => {
                 console.log(data.data);
                 document.getElementById("outputtedAnime").value = data.data.title_english;
+                document.getElementById("animeGenre").value = data.data.genres[0].name;
+                document.getElementById("animeEpisodes").value = data.data.episodes;
+                document.getElementById("animeEpDuration").value = data.data.duration;
+                document.getElementById("animeImage").src = data.data.images.jpg.image_url;
             });
         });
     });
