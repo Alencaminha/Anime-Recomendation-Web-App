@@ -14,11 +14,17 @@ window.onload = () => {
         // For user input box
         fetch(`https://api.jikan.moe/v4/anime/${userData.input_id}`)
         .then(res => res.json())
-        .then(animeData => {document.getElementById("inputtedAnime").value = animeData.data.title_english});
+        .then(data => {document.getElementById("inputtedAnime").value = data.data.title_english});
         // For recommended anime box
         fetch(`https://api.jikan.moe/v4/anime/${userData.recommended_id}`)
         .then(res => res.json())
-        .then(animeData => {document.getElementById("outputtedAnime").value = animeData.data.title_english});
+        .then(data => {
+            document.getElementById("outputtedAnime").value = data.data.title_english;
+            document.getElementById("animeGenre").value = data.data.genres[0].name;
+            document.getElementById("animeEpisodes").value = data.data.episodes;
+            document.getElementById("animeEpDuration").value = data.data.duration;
+            document.getElementById("animeImage").src = data.data.images.jpg.image_url;
+        });
     });
 }
 
@@ -29,12 +35,14 @@ searchRecommendation = () => {
     .then(res => res.json())
     .then(data => {
         let insertedAnimeMalId = data.data[0].mal_id;
+        updateUser("input_id", insertedAnimeMalId);
         // This fetch serves to get a recommendation based on the anime id
         fetch(`https://api.jikan.moe/v4/anime/${insertedAnimeMalId}/recommendations`)
         .then(res => res.json())
         .then(data => {
             let randomId = Math.floor(Math.random() * data.data.length);
             let recommendedAnimeMalId = data.data[randomId].entry.mal_id;
+            updateUser("recommended_id", recommendedAnimeMalId);
             // And this fetch serves to get the recommended anime's full description
             fetch(`https://api.jikan.moe/v4/anime/${recommendedAnimeMalId}/full`)
             .then(res => res.json())
@@ -48,6 +56,20 @@ searchRecommendation = () => {
             });
         });
     });
+}
+
+updateUser = (fieldToChange, newValue) => {
+    fetch("http://localhost:3000/updateuser", {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                field: fieldToChange,
+                value: newValue,
+                id: sessionStorage.getItem("loggedUserId")
+            })
+        });
 }
 
 copyContent = () => {
