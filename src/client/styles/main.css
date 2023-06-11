@@ -42,11 +42,6 @@ button{
 }
 
 @media screen and (min-width: 600px){
-    .nav_bar {
-        display: flex;
-        justify-content: space-between;
-        padding: 1.5rem 6rem;
-    }
     .bt_retorna_pag{
         justify-content: center;
     }
