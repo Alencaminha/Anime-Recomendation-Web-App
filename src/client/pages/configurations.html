@@ -4,35 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/configurations.css">
-    <title>Sua conta</title>
+    <link rel="stylesheet" type="text/css" href="/src/client/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/src/client/styles/configurations.css">
+    <title>Account informations</title>
 </head>
 <body>
     <header>
-        <button><a href="../../../index.html">Sair do sistema</a></button>
+        <button><a href="/index.html">Sair</a></button>
         <button><a href="profile.html">Voltar ao perfil</a></button>
     </header>
-    <div class="alterUserData">
-        <h3>Alterar dados do usuário</h3>
-        <div class="container">
-            <label>Novo nome de usuário</label>
-            <input type="text" id="altUsername">
-            <button onclick="alterUserData('username', document.getElementById('altUsername'))">Alterar</button>
-        </div>
-        <div class="container">
-            <label>Novo e-mail</label>
-            <input type="text" id="altEmail">
-            <button onclick="alterUserData('email', document.getElementById('altEmail'))">Alterar</button>
-        </div>
-        <div class="container">
-            <label>Nova senha</label>
-            <input type="password" id="altPassword">
-            <button onclick="alterUserData('password', document.getElementById('altPassword'))">Alterar</button>
-        </div>
-    </div>
+    <h3>Alterar dados da conta</h3>
+    <input type="text" id="altUsername" placeholder="New username">
+    <button onclick="alterUserData('username', document.getElementById('altUsername'))">Alterar</button>
+    </br>
+    <input type="text" id="altEmail" placeholder="New e-mail">
+    <button onclick="alterUserData('email', document.getElementById('altEmail'))">Alterar</button>
+    </br>
+    <input type="password" id="altPassword" placeholder="New password">
+    <button onclick="alterUserData('password', document.getElementById('altPassword'))">Alterar</button>
+    </br>
     <button id="deleteUserButton" onclick="deleteAccount()">Deletar conta</button>
-    <script src="../scripts/session.js"></script>
-    <script src="../scripts/configurations.js"></script>
+    <script src="/src/client/scripts/session.js"></script>
+    <script src="/src/client/scripts/configurations.js"></script>
 </body>
 </html>

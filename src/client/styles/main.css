@@ -1,7 +1,7 @@
 body {
     font-family:'Computer Says No', Arial, sans-serif;
     font-size: 107%;
-    background-image:url("../../../img/main-wallpaper.png");
+    background-image:url("/img/main-wallpaper.png");
 }
 
 .botao_home{
@@ -48,7 +48,7 @@ button{
     .bt_retorna_pag a{
         text-decoration: none;
         padding: 0.5rem 1rem;
-    } 
+    }
     button{
         background-color:#eaa1bc;
         padding: 7px 25px;

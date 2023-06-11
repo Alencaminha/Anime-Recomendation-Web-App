@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../styles/main.css">
-    <link rel="stylesheet" type="text/css" href="../styles/signup.css">
-    <title>Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="/src/client/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/src/client/styles/signup.css">
+    <title>Sign Up</title>
 </head>
 <body>
     <header>
@@ -19,28 +19,16 @@
             </div>
         </nav>
     </header>
-    <h3>Crie sua conta para receber indicações de Animes e muito mais.</h3>
     <div class="signup">
-        <form onsubmit="return false">
-            <div class="username">
-                <label>USERNAME</label>
-                <input type="text" id="signupUsername" placeholder="Enter a username" required>
-            </div>
-            <div class="email">
-                <label>E-MAIL</label>
-                <input type="text" id="signupEmail" placeholder="Enter an e-mail" required>
-            </div>
-            <div class="password">
-                <label>PASSWORD</label>
-                <input type="password" id="signupPassword" placeholder="Enter a password" required>
-            </div>
-            <button type="button" onclick="signUp()">Cadastrar-se</button>
-        </form>
+        <input type="text" id="signupUsername" placeholder="Enter a username" required>
+        <input type="text" id="signupEmail" placeholder="Enter an e-mail" required>
+        <input type="password" id="signupPassword" placeholder="Enter a password" required>
+        <button type="button" onclick="signUp()">Cadastrar-se</button>
     </div>
     <div id="botao_retorna_pag" class="bt_retorna_pag">
-        <h4 class="texto">Lembrou que tem conta?</h4>
-        <span><a href="login.html">Entrar</a></span>
+        <h4 class="texto">Lembrou que já tem uma conta?</h4>
+        <span><a href="login.html">Clique aqui para entrar</a></span>
     </div>
-    <script src="../scripts/loginSignup.js"></script>
+    <script src="/src/client/scripts/loginSignup.js"></script>
 </body>
 </html>

@@ -1,16 +1,8 @@
 const signupUsername = document.getElementById("signupUsername");
 const signupPassword = document.getElementById("signupPassword");
 const signupEmail = document.getElementById("signupEmail");
-const loginUsername = document.getElementById("loginUsername");
-const loginPassword = document.getElementById("loginPassword");
-
-showPassword = () => {
-    if (loginPassword.type === "password") {
-        loginPassword.type = "text";
-    } else {
-        loginPassword.type = "password";
-    }
-}
+const loginUsername = document.getElementById("usernameLoginField");
+const loginPassword = document.getElementById("passwordLoginField");
 
 signUp = () => {
     fetch("http://localhost:3000/createuser", {
@@ -54,6 +46,13 @@ login = () => {
         }
     });
 };
+
+const passwordToggle = document.getElementById("passwordVisibilityButton");
+passwordToggle.addEventListener('click', () => {
+    const type = loginPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+    loginPassword.setAttribute('type', type);
+    passwordToggle.classList.toggle('fa-eye-slash');
+});
 
 [loginUsername, loginPassword].forEach(element => {
     element.addEventListener("keypress", event => {

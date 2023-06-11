@@ -4,23 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/profile.css">
-    <title>Perfil</title>
+    <link rel="stylesheet" type="text/css" href="/src/client/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/src/client/styles/profile.css">
+    <title>Profile</title>
 </head>
 <body>
     <header>
-        <button onclick="quit()"><a href="../../../index.html">Sair do sistema</a></button>
+        <button onclick="quit()"><a href="/index.html">Sair</a></button>
         <button><a href="about.html">Sobre o projeto</a></button>
-        <div>
-            <span id="usernameIdentification">Olá, Usuário</span>
-            <button><a href="configurations.html">Imagem do perfil</a></button>
-        </div>
+        <button><a href="configurations.html">Alterar informações do perfil</a></button>
+        <span id="usernameIdentification">Olá, Usuário</span>
     </header>
     <div class="input-box">
         <span>Insira um Anime</span>
         <input type="text" id="inputtedAnime">
-        <button onclick="searchRecommendation()">Enviar</button>
+        <button onclick="searchRecommendation()">Procurar nova recomendação</button>
     </div>
     <br class="output-box">
         <span>O anime recomendado</span>
@@ -38,7 +36,7 @@
         </br>
         <img id="animeImage" alt="Recommended anime image" width="200" height="300">
     </div>
-    <script src="../scripts/session.js"></script>
-    <script src="../scripts/main.js"></script>
+    <script src="/src/client/scripts/session.js"></script>
+    <script src="/src/client/scripts/main.js"></script>
 </body>
 </html>
