@@ -16,19 +16,22 @@
                 <img class="img-logo" src="/img/main-logo.png" alt="Logo do site onde pode-se ler Views Anime na cor preta">
             </div>
         </nav>
+        <div class="botao-home">
+            <div class="seta"></div>
+            <div><p>Voltar para o site</p></div>
+            <div><span><a class="bt-home" href="/index.html">VIEWS ANIME</a></span></div>
+        </div>
     </header>
-    <div class="botao-home">
-        <p>Voltar para o site</p>
-        <span><a class="bt-home" href="/index.html">VIEWS ANIME</a></span>
-    </div>
-    <h3>Login</h3>
     <div class="login">
+        <h3>Login</h3>
         <input type="text" id="usernameLoginField" placeholder="Enter your username" required>
-        <input type="password" id="passwordLoginField" placeholder="Enter your password" required>
-        <i class="far fa-eye" id="passwordVisibilityButton" style="margin-left: -30px; cursor: pointer;"></i>
+        <div class="password-eye">
+            <input type="password" id="passwordLoginField" placeholder="Enter your password" required>
+            <i class="far fa-eye" id="passwordVisibilityButton" style="margin-left: -30px; cursor: pointer;"></i>
+        </div>  
         <button onclick="login()">Entrar</button>
     </div>
-    <div id="botao-retorna-pag" class="bt-retorna-pag">
+    <div id="bt-criar" class="link-criar-conta">
         <h4 class="texto">Ainda não tem conta?</h4>
         <span><a href="signup.html"><h4>Clique aqui para criar uma</h4></a></span>
     </div>
