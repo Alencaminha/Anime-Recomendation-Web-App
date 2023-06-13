@@ -4,7 +4,14 @@ body{
    height: 85vh;
 }
 
+.title{
+    font-family:'Computer Says No', Arial, sans-serif;
+    font-size: 242%;
+    margin: 3.5rem; 
+}
+
 .about-project{
+    font-family:'Computer Says No', Arial, sans-serif;
     display: flex;
     align-items: center;
     font-size: 115%;
@@ -14,6 +21,7 @@ body{
 }
 
 .about-project .preview-project{
+    font-family:'Computer Says No', Arial, sans-serif;
     text-align: justify;
 }
 .about-image-mobile{
