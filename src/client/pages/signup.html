@@ -11,21 +11,24 @@
 <body>
     <header>
         <nav class="nav-bar">
-            <div class="botao-home">
-                <button><a class="bt-home" href="/index.html" target="_blank">HOME</a></button>
-            </div>
             <div class="logo">
                 <img class="img-logo" src="/img/main-logo.png" alt="Logo do site onde pode-se ler Views Anime na cor preta">
             </div>
         </nav>
+        <div class="botao-home">
+            <div class="seta"></div>
+            <!-- <div><p>Voltar para o site</p></div> -->
+            <div><span><a class="bt-home" href="/index.html">HOME</a></span></div>
+        </div>
     </header>
     <div class="signup">
+        <h3>Criar seu cadastro</h3>
         <input type="text" id="signupUsername" placeholder="Enter a username" required>
         <input type="text" id="signupEmail" placeholder="Enter an e-mail" required>
         <input type="password" id="signupPassword" placeholder="Enter a password" required>
         <button type="button" onclick="signUp()">Cadastrar-se</button>
     </div>
-    <div id="bt_singin" class="bt_retorna_pag">
+    <div id="bt-singin" class="bt-singin-link">
         <h4 class="texto">Lembrou que já tem uma conta?</h4>
         <span><a href="login.html">Clique aqui para entrar</a></span>
     </div>

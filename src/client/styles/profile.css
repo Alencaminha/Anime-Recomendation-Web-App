@@ -1,1 +1,17 @@
+body{
+    background:  url("/img/main-wallpaper.png") ;
+    background-size: cover;
+ }
 
+ 
+ button {
+    background-color: rgb(162, 157, 170);
+    padding: 3px 20px;
+    border: 7px solid transparent;
+    border-radius: 20px;
+}
+
+button:hover {
+    background-color: rgb(81, 18, 182);
+    cursor: pointer;
+}

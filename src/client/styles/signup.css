@@ -27,51 +27,45 @@ a:hover{
 .botao-home .bt-home{
     cursor:pointer;
 }
+.seta {
+    padding: 10px;
+    box-shadow: 2px -2px 0 1px rgb(81, 18, 182) inset;
+    border: solid transparent;
+    border-width: 0 0 2px 2px;
+    transform: rotate(45deg);
+}
+
 .img-logo{
-    height: 15vh;
+    height: 25vh;
     margin-top: 3vh;
 }
 
 .nav-bar{
     background:  url("/img/main-wallpaper.png");
     display: block;  
-    height: 15vh; /*se ajusta a janela de visualização do usuario*/
-}
-
-h3{
-    text-align: left;
-    padding: 0.5rem 3rem;
+    height: 25vh; /*se ajusta a janela de visualização do usuario*/
 }
 .signup{
     display: flex;
     flex-direction: column;
-    text-align: right;
-    padding: 1.5rem 1.0rem;    
-}
-.signup label{
-    padding: 1.0rem 1.0rem;
-}
-
-.botao_login{
-    display: flex;
+    gap: 15px;
     align-items: center;
-    padding: 0.5rem 1.5rem;
 }
 
+button {
+    background-color: rgb(162, 157, 170);
+    padding: 3px 20px;
+    border: 7px solid transparent;
+    border-radius: 20px;
+}
 
-@media screen and (min-width: 600px){
-    .nav_bar {
-        display: flex;
-        justify-content: space-between;
-        padding: 1.5rem 6rem;
-    }
-    h3{
-        text-align: center;
-        padding: 0.5rem 3rem;
-    }
-    .signup label{
-        text-align: center;
-        padding: 1.0rem 1.0rem;
-    }
-   
+button:hover {
+    background-color: rgb(81, 18, 182);
+    cursor: pointer;
+}
+
+.bt-singin-link{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 5rem;
 }
