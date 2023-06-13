@@ -1,3 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background:  url("/img/main-wallpaper.png") ;
+    height: 70vh;
+    text-align: center;
+    align-items: center;
+ }
+a{
+   color: rgb(81, 18, 182); 
+   text-decoration: none;
+   transition: 0.5s ease;
+   font-weight: bold;
+}
+a:hover{
+    opacity: 0.5;
+}
+.botao-home{
+    display: flex;
+    grid-gap: 10px;
+    padding: 2rem 5rem;
+}
+.botao-home .bt-home{
+    cursor:pointer;
+}
+.img-logo{
+    height: 15vh;
+    margin-top: 3vh;
+}
+
+.nav-bar{
+    background:  url("/img/main-wallpaper.png");
+    display: block;  
+    height: 15vh; /*se ajusta a janela de visualização do usuario*/
+}
+
 h3{
     text-align: left;
     padding: 0.5rem 3rem;

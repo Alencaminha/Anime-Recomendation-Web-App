@@ -36,14 +36,14 @@ a:hover{
 }
 
 .img-logo{
-    height: 15vh;
+    height: 25vh;
     margin-top: 3vh;
 }
 
 .nav-bar{
     background:  url("/img/main-wallpaper.png");
     display: block;  
-    height: 15vh; /*se ajusta a janela de visualização do usuario*/
+    height: 25vh; /*se ajusta a janela de visualização do usuario*/
 }
 .login{
     display: flex;
