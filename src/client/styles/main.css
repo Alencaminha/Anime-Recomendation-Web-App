@@ -4,21 +4,21 @@ body {
     background-image:url("/img/main-wallpaper.png");
 }
 
-.botao_home{
+.botao_home {
     text-align: right;
 }
 .bt_home {
     text-decoration: none;
 }
-.logo{
+.logo {
     text-align: center;
     padding-top: 1.0rem;
 }
 
-.img_logo{
+.img_logo {
     width: 40%;
 }
-.signup label{
+.signup label {
     padding: 1.0rem 1.0rem;
 }
 .bt_retorna_pag {
@@ -28,12 +28,12 @@ body {
     justify-content: space-between;
 }
 
-.bt_retorna_pag a{
+.bt_retorna_pag a {
     text-decoration: none;
     padding: 0.5rem 1rem;
 }
 
-button{
+button {
     background-color:#eaa1bc;
     padding: 3px 20px;
     border: 7px solid transparent;
@@ -41,7 +41,11 @@ button{
     margin-top: 1em;
 }
 
-@media screen and (min-width: 600px){
+button:hover {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
     .bt_retorna_pag{
         justify-content: center;
     }
