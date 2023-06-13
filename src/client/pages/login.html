@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/src/client/styles/main.css">
+    <!--<link rel="stylesheet" type="text/css" href="/src/client/styles/main.css">-->
     <link rel="stylesheet" type="text/css" href="/src/client/styles/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <title>Login</title>
 </head>
 <body>
     <header>
-        <nav class="nav_bar">
-            <div class="botao_home">
-                <button><a class="bt_home" href="/index.html">HOME</a></button>
-            </div>
+        <nav class="nav-bar">
             <div class="logo">
-                <img class="img_logo" src="/img/main-logo.png" alt="Logo do site onde pode-se ler Views Anime na cor preta">
+                <img class="img-logo" src="/img/main-logo.png" alt="Logo do site onde pode-se ler Views Anime na cor preta">
             </div>
         </nav>
     </header>
+    <div class="botao-home">
+        <p>Voltar para o site</p>
+        <span><a class="bt-home" href="/index.html">VIEWS ANIME</a></span>
+    </div>
     <h3>Login</h3>
     <div class="login">
         <input type="text" id="usernameLoginField" placeholder="Enter your username" required>
@@ -27,10 +28,11 @@
         <i class="far fa-eye" id="passwordVisibilityButton" style="margin-left: -30px; cursor: pointer;"></i>
         <button onclick="login()">Entrar</button>
     </div>
-    <div id="botao_retorna_pag" class="bt_retorna_pag">
+    <div id="botao-retorna-pag" class="bt-retorna-pag">
         <h4 class="texto">Ainda não tem conta?</h4>
         <span><a href="signup.html"><h4>Clique aqui para criar uma</h4></a></span>
     </div>
     <script src="/src/client/scripts/loginSignup.js"></script>
+    
 </body>
 </html>

@@ -4,44 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/src/client/styles/main.css">
+    <!--<link rel="stylesheet" type="text/css" href="/src/client/styles/main.css">-->
     <link rel="stylesheet" type="text/css" href="/src/client/styles/about.css">
+    <link rel="stylesheet" type="text/css" href="/src/client/styles/navbar.css">
     <title>About the project</title>
 </head>
 <body>
     <header>
-        <nav class="nav_bar">
+        <nav class="nav-bar">
             <div class="logo">
-                <img class="img_logo" src="/img/main-logo.png" alt="Logo do site onde pode-se ler Views Anime na cor preta">
-             </div>
-             <div class="mobile_menu">
+               <img class="img-logo" src="/img/main-logo.png" alt="Logo do site onde pode-se ler Views Anime na cor preta">
+             </div> 
+             <div class="mobile-menu">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
              </div>
-            <ul class="nav_list">
-                <li><a href="/"> Home</a></li>
-                <li><a href="/">Conta</a></li>
-                <li><a href="/">Perfil</a></li>
-                <li><a href="/">Sobre</a></li>
+            <ul class="nav-list">
+                <li><a href="/index.html"> Home</a></li>
+                <li><a href="/src/client/pages/configurations.html">Conta</a></li>
+                <li><a href="profile.html">Perfil</a></li>
+                <li><a href="/src/client/pages/about.html">Sobre</a></li>
             </ul>
-             <!--<div class="line4"></div>
-            <button><a class="buttonSingIn" href="/">Entrar</a></button>-->
         </nav>
     </header>
-    <button><a href="profile.html">Retornar ao perfil</a></button>
+    <main>
+    <div class="about-image-mobile">
+        <img class="about-img-mobile" src="/img/Sakura.PNG">
+    </div>
     <h1>SOBRE</h1>
-    <p>Eu commodo fugiat occaecat pariatur cillum non reprehenderit enim id magna velit.<br>
-        Incididunt magna nulla tempor voluptate ipsum fugiat nulla incididunt anim nostrud velit ut.<br>
-        Nisi pariatur quis est aliquip amet Lorem tempor eiusmod nisi non ex eu fugiat id.
-    </p>
-    <ul>
-        <li>Alexandre</li>
-        <li>Fernanda</li>
-        <li>Gabriel</li>
-        <li>Karina</li>
-        <li>Lucas</li>
-    </ul>
+    <div class="about-project">
+        <div class="about-work">
+            <p class="preview-project">Este trabalho tem como objetivo realizar a aplicação de CRUD (Create, Read, Update e Delete)
+            que é um acrônimo para as maneiras de se operar informação armazenada em banco de dados. <br>
+            
+            O site propõe recomendar aos usuários um anime para assistir com base nos cinco animes favoritos
+            sinalizados pelo usuário na hora da consulta.<br>
+            Foi utilizado na elaboração desta A3 o MYSQL e API Jikan - Myanimelist.<br>
+            </p>
+            <br>
+            <ul class="prepared-by">
+                <li>Alexandre Nascimento Caminha - 125111370334</li>
+                <li>Fernanda Beatriz Leme Bergoci - 125111367122</li>
+                <li>Gabriel Cardoso Martins - </li>
+                <li>Karina de Oliveira Matiolli - 125111355232</li>
+                <li>Lucas Felinto Queiroz da Costa - 125111377173</li>
+            </ul>
+        </div>
+        <div class="about-image">
+            <img class="about-img" src="/img/Sakura.PNG">
+        </div>
+    </div>
+    </main>
+    <footer>
+
+    </footer>
     <script src="/src/client/scripts/session.js"></script>
     <script src="/src/client/scripts/mobile_navbar.js"></script>
 </body>

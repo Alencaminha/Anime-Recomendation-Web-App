@@ -6,13 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/src/client/styles/main.css">
     <link rel="stylesheet" type="text/css" href="/src/client/styles/profile.css">
+    <link rel="stylesheet" type="text/css" href="/src/client/styles/navbar.css">
     <title>Profile</title>
 </head>
 <body>
     <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img class="img-logo" src="/img/main-logo.png" alt="Logo do site onde pode-se ler Views Anime na cor preta">
+            </div> 
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="/index.html"> Home</a></li>
+                <li><a href="/src/client/pages/configurations.html">Conta</a></li>
+                <li><a href="profile.html">Perfil</a></li>
+                <li><a href="/src/client/pages/about.html">Sobre</a></li>
+            </ul>
+        </nav>
         <button onclick="quit()"><a href="/index.html">Sair</a></button>
-        <button><a href="about.html">Sobre o projeto</a></button>
-        <button><a href="configurations.html">Alterar informações do perfil</a></button>
+       <!-- <button><a href="about.html">Sobre o projeto</a></button>
+        <button><a href="configurations.html">Alterar informações do perfil</a></button>-->
         <span id="usernameIdentification">Olá, Usuário</span>
     </header>
     <div class="input-box">
@@ -38,5 +55,6 @@
     </div>
     <script src="/src/client/scripts/session.js"></script>
     <script src="/src/client/scripts/main.js"></script>
+    <script src="/src/client/scripts/mobile_navbar.js"></script>
 </body>
 </html>

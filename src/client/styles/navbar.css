@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+a{
+   color: black; 
+   text-decoration: none;
+   transition: 0.5s ease;
+}
+a:hover{
+    opacity: 0.5;
+}
+.img-logo{
+    height: 10vh;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:  url("/img/main-wallpaper.png") ;
+    height: 15vh; /*se ajusta a janela de visualização do usuario*/
+    padding: 0 34px;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    grid-gap: 10px;
+}
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+.mobile-menu{
+    display: none;
+    cursor:pointer;
+}
+.mobile-menu div{
+    width: 35px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: black;
+    margin: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+@media (max-width: 850px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list{
+        position: absolute;
+        left: -100%;
+        top: 15vh;
+        gap: 0;
+        background:  #f5f2f2e1;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        right:0;
+        height:50vh;
+        justify-content: space-between;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-list li{
+        margin: 16px 0;
+    }
+    .mobile-menu{
+        display: block;
+    }
+    .nav-list.active{
+        transform: translateX(0);
+    }
+    .mobile-menu.active .line1{
+        transform: rotate(-45deg) translate(-8px, 8px);
+    }
+    .mobile-menu.active .line2{
+        opacity: 0;
+    }
+    .mobile-menu.active .line3{
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+}    
