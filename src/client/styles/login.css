@@ -4,14 +4,21 @@
 }
 body{
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:'Computer Says No', Arial, sans-serif;
     background:  url("/img/main-wallpaper.png") ;
     height: 70vh;
     text-align: center;
     align-items: center;
  }
+
+ .title{
+    font-family:'Computer Says No', Arial, sans-serif;
+    font-size: 107%;
+    margin: 0.7rem; 
+}
+
 a{
-   color: rgb(81, 18, 182); 
+   color: rgba(228, 85, 168, 0.712); 
    text-decoration: none;
    transition: 0.5s ease;
    font-weight: bold;
@@ -29,7 +36,7 @@ a:hover{
 }
 .seta {
     padding: 10px;
-    box-shadow: 2px -2px 0 1px rgb(81, 18, 182) inset;
+    box-shadow: 2px -2px 0 1px rgba(227, 25, 143, 0.879) inset;
     border: solid transparent;
     border-width: 0 0 2px 2px;
     transform: rotate(45deg);
@@ -45,7 +52,7 @@ a:hover{
     display: block;  
     height: 25vh; /*se ajusta a janela de visualização do usuario*/
 }
-.login{
+.login{ 
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -53,14 +60,14 @@ a:hover{
 }
 
 button {
-    background-color: rgb(162, 157, 170);
+    background-color: rgba(162, 157, 170, 0.459);
     padding: 3px 20px;
     border: 7px solid transparent;
     border-radius: 20px;
 }
 
 button:hover {
-    background-color: rgb(182, 18, 114);
+    background-color: rgba(228, 85, 168, 0.712);
     cursor: pointer;
 }
 
