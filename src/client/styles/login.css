@@ -1,7 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-}
+    
+}   
 body{
     box-sizing: border-box;
     font-family:'Computer Says No', Arial, sans-serif;
@@ -18,7 +19,7 @@ body{
 }
 
 a{
-   color: rgba(228, 85, 168, 0.712); 
+   color: rgba(227, 25, 143, 0.879); 
    text-decoration: none;
    transition: 0.5s ease;
    font-weight: bold;

@@ -31,18 +31,20 @@
     </header>
     <section class="box">
     </br>
-        <h3>Alterar dados da conta</h3>
+        <div class="title">
+            <p>SECURITY - Change password</p>
+        </div>
         <div class="alterar-dados">
             <p><input type="text" id="altUsername" placeholder="New username">
-            <button onclick="alterUserData('username', document.getElementById('altUsername'))">Alterar</button></p>
+            <button onclick="alterUserData('username', document.getElementById('altUsername'))">Change Name</button></p>
             </br>
             <p><input type="text" id="altEmail" placeholder="New e-mail">
-            <button onclick="alterUserData('email', document.getElementById('altEmail'))">Alterar</button></p>
+            <button onclick="alterUserData('email', document.getElementById('altEmail'))">Change E-mail</button></p>
             </br>
             <p><input type="password" id="altPassword" placeholder="New password">
-            <button onclick="alterUserData('password', document.getElementById('altPassword'))">Alterar</button></p>
+            <button onclick="alterUserData('password', document.getElementById('altPassword'))">Change password</button></p>
             </br>
-            <button id="deleteUserButton" onclick="deleteAccount()">Deletar conta</button>
+            <button id="deleteUserButton" onclick="deleteAccount()">Delete Account</button>
         </div>
     </br>
     </section>

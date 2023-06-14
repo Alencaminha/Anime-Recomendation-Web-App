@@ -11,7 +11,7 @@ body{
     align-items: center;
  }
 a{
-   color: rgb(81, 18, 182); 
+   color: rgba(227, 25, 143, 0.879);
    text-decoration: none;
    transition: 0.5s ease;
    font-weight: bold;
@@ -29,7 +29,7 @@ a:hover{
 }
 .seta {
     padding: 10px;
-    box-shadow: 2px -2px 0 1px rgb(81, 18, 182) inset;
+    box-shadow: 2px -2px 0 1px rgba(227, 25, 143, 0.879) inset;
     border: solid transparent;
     border-width: 0 0 2px 2px;
     transform: rotate(45deg);
@@ -53,14 +53,14 @@ a:hover{
 }
 
 button {
-    background-color: rgb(162, 157, 170);
+    background-color:rgba(162, 157, 170, 0.459);
     padding: 3px 20px;
     border: 7px solid transparent;
     border-radius: 20px;
 }
 
 button:hover {
-    background-color: rgb(81, 18, 182);
+    background-color: rgba(228, 85, 168, 0.712);
     cursor: pointer;
 }
 

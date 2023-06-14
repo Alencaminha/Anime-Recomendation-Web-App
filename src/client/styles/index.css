@@ -1,10 +1,12 @@
 *{
     margin: 0;
     padding: 0;
+    font-family:'Computer Says No', Arial, sans-serif;
+    text-decoration: none;
+    color: black;     
 }
 body{
     box-sizing: border-box;
-    font-family:'Computer Says No', Arial, sans-serif;
     background:  url("/img/main-wallpaper.png") ;
     height: 70vh;
     text-align: center;
@@ -25,13 +27,13 @@ body{
     text-align: center;
     align-items: center;
     margin-left: 6rem;
-  
 }
 button {
     background-color: rgba(162, 157, 170, 0.459);
     padding: 3px 20px;
     border: 7px solid transparent;
     border-radius: 20px;
+    
 }
 
 button:hover {
