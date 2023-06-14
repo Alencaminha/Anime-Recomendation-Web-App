@@ -1,4 +1,3 @@
-
 *{
     margin: 0;
     padding: 0;
@@ -7,50 +6,20 @@ body{
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background:  url("/img/main-wallpaper.png") ;
-    height: 70vh;
-    text-align: center;
-    align-items: center;
- }
+    text-align:center;
+}
 a{
    color: rgb(81, 18, 182); 
    text-decoration: none;
    transition: 0.5s ease;
-   font-weight: bold;
+   /* font-weight: bold; deixar negrito*/
 }
 a:hover{
     opacity: 0.5;
 }
-.botao-home{
-    display: flex;
-    grid-gap: 10px;
-    padding: 2rem 5rem;
-}
-.botao-home .bt-home{
-    cursor:pointer;
-}
-.seta {
-    padding: 10px;
-    box-shadow: 2px -2px 0 1px rgb(81, 18, 182) inset;
-    border: solid transparent;
-    border-width: 0 0 2px 2px;
-    transform: rotate(45deg);
-}
 
-.img-logo{
-    height: 25vh;
-    margin-top: 3vh;
-}
-
-.nav-bar{
-    background:  url("/img/main-wallpaper.png");
-    display: block;  
-    height: 25vh; /*se ajusta a janela de visualização do usuario*/
-}
-.login{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
+.alterar-dados{
+    margin-top: 35px;
 }
 
 button {
@@ -65,23 +34,20 @@ button:hover {
     cursor: pointer;
 }
 
-.link-criar-conta{
+.box{
+    width: 400px;
+    height: 300px;
+    background-color: rgba(70, 218, 218, 0.342);
     display: flex;
     flex-direction: column;
-    padding: 2rem 5rem;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-
-.txt_field {
-    font-family:'Computer Says No', Arial, sans-serif;
-    font-size: 97%;
-    width: 600px;
-    padding: 7px 50px;
-    border: 7px solid #D9D9D9;
-    border-radius: 20px;
-    margin: 10px;
-    position: absolute;
-    right: 62%;
-    top: 43%;
-    transform: translate(38%, -15%);
+.gif-config .gif-img{
+    background-size:cover;
+    margin-top: 20px;
+    margin: 50px;
+    width: 60vh;
+    border-radius: 10px;
 }

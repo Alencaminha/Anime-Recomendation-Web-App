@@ -23,29 +23,34 @@
              </div>
             <ul class="nav-list">
                 <li><a href="/index.html"> Home</a></li>
-                <li><a href="/src/client/pages/configurations.html">Conta</a></li>
-                <li><a href="profile.html">Perfil</a></li>
-                <li><a href="/src/client/pages/about.html">Sobre</a></li>
+                <li><a href="/src/client/pages/configurations.html">Account informations</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="/src/client/pages/about.html">About the project</a></li>
             </ul>
         </nav>
     </header>
-    <header>
-        <button><a href="/index.html">Sair</a></button>
-        <button><a href="profile.html">Voltar ao perfil</a></button>
-    </header>
-    <h3>Alterar dados da conta</h3>
-    <input type="text" id="altUsername" placeholder="New username">
-    <button onclick="alterUserData('username', document.getElementById('altUsername'))">Alterar</button>
+    <section class="box">
     </br>
-    <input type="text" id="altEmail" placeholder="New e-mail">
-    <button onclick="alterUserData('email', document.getElementById('altEmail'))">Alterar</button>
+        <h3>Alterar dados da conta</h3>
+        <div class="alterar-dados">
+            <p><input type="text" id="altUsername" placeholder="New username">
+            <button onclick="alterUserData('username', document.getElementById('altUsername'))">Alterar</button></p>
+            </br>
+            <p><input type="text" id="altEmail" placeholder="New e-mail">
+            <button onclick="alterUserData('email', document.getElementById('altEmail'))">Alterar</button></p>
+            </br>
+            <p><input type="password" id="altPassword" placeholder="New password">
+            <button onclick="alterUserData('password', document.getElementById('altPassword'))">Alterar</button></p>
+            </br>
+            <button id="deleteUserButton" onclick="deleteAccount()">Deletar conta</button>
+        </div>
     </br>
-    <input type="password" id="altPassword" placeholder="New password">
-    <button onclick="alterUserData('password', document.getElementById('altPassword'))">Alterar</button>
-    </br>
-    <button id="deleteUserButton" onclick="deleteAccount()">Deletar conta</button>
-    <script src="/src/client/scripts/session.js"></script>
-    <script src="/src/client/scripts/configurations.js"></script>
-    <!-- <script src="/src/client/scripts/mobile_navbar.js"></script> -->
+    </section>
+    <div class="gif-config">
+        <img class="gif-img" src="/img/gif-dragon.gif">
+    </div>
+        <script src="/src/client/scripts/session.js"></script>
+        <script src="/src/client/scripts/configurations.js"></script>
+        <script src="/src/client/scripts/mobile_navbar.js"></script>
 </body>
 </html>

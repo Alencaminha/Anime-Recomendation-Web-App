@@ -62,7 +62,7 @@ a:hover{
         flex-direction: column;
         width: 100vw;
         right:0;
-        height:50vh;
+        height:60vh;
         justify-content: space-between;
         transform: translateX(100%);
         transition: transform 0.3s ease-in;

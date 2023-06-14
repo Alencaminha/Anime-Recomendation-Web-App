@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" type="text/css" href="/src/client/styles/main.css"> -->
     <link rel="stylesheet" type="text/css" href="/src/client/styles/profile.css">
     <link rel="stylesheet" type="text/css" href="/src/client/styles/navbar.css">
     <title>Profile</title>
@@ -21,38 +20,42 @@
                 <div class="line3"></div>
             </div>
             <ul class="nav-list">
+                <li><span id="usernameIdentification">Olá, Usuário</span></li>
                 <li><a href="/index.html"> Home</a></li>
                 <li><a href="/src/client/pages/configurations.html">Conta</a></li>
                 <li><a href="profile.html">Perfil</a></li>
                 <li><a href="/src/client/pages/about.html">Sobre</a></li>
+                <li><button class="bt-logof" onclick="quit()"><a href="/index.html">Sair</a></button></li>
             </ul>
         </nav>
-        <button onclick="quit()"><a href="/index.html">Sair</a></button>
-       <!-- <button><a href="about.html">Sobre o projeto</a></button>
-        <button><a href="configurations.html">Alterar informações do perfil</a></button>-->
-        <span id="usernameIdentification">Olá, Usuário</span>
     </header>
-    <div class="input-box">
-        <span>Insira um Anime</span>
-        <input type="text" id="inputtedAnime">
-        <button onclick="searchRecommendation()">Procurar nova recomendação</button>
-    </div>
-    <br class="output-box">
-        <span>O anime recomendado</span>
-        <input type="text" id="outputtedAnime" readonly>
-        <button id="copyContentButton" onclick="copyContent()">Copiar nome do Anime</button>
-        </br>
-        <span>Gênero</span>
-        <input type="text" id="animeGenre" readonly>
-        </br>
-        <span>Episódios</span>
-        <input type="text" id="animeEpisodes" readonly>
-        </br>
-        <span>Duração por epidódio</span>
-        <input type="text" id="animeEpDuration" readonly>
-        </br>
-        <img id="animeImage" alt="Recommended anime image" width="200" height="300">
-    </div>
+    <section class="conteiner">
+        <div class="box-main">
+            <div class="input-box">
+                <span>Insira um Anime</span>
+                <input type="text" id="inputtedAnime">
+                <button onclick="searchRecommendation()">Procurar nova recomendação</button>
+            </div>
+            <div class="output-box">
+                <span>O anime recomendado</span>
+                <input type="text" id="outputtedAnime" readonly>
+                <button id="copyContentButton" onclick="copyContent()">Copiar nome do Anime</button>
+                </br>
+                <span>Gênero</span>
+                <input type="text" id="animeGenre" readonly>
+                </br>
+                <span>Episódios</span>
+                <input type="text" id="animeEpisodes" readonly>
+                </br>
+                <span>Duração por epidódio</span>
+                <input type="text" id="animeEpDuration" readonly>
+            </div>
+            <br>
+        </div>
+        <div class="recomended-anime">
+            <img id="animeImage" alt="Recommended anime image" width="300" height="450">
+        </div>
+    </section>
     <script src="/src/client/scripts/session.js"></script>
     <script src="/src/client/scripts/main.js"></script>
     <script src="/src/client/scripts/mobile_navbar.js"></script>
