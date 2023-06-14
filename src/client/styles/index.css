@@ -1,5 +1,55 @@
-.center {
-    position: absolute;
-    left: 50%;
-    top: 50%;
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+    font-family:'Computer Says No', Arial, sans-serif;
+    background:  url("/img/main-wallpaper.png") ;
+    height: 70vh;
+    text-align: center;
+    align-items: center;
+ }
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.img-logo{
+    height: 50vh;
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    margin-left: 6rem;
+  
+}
+button {
+    background-color: rgba(162, 157, 170, 0.459);
+    padding: 3px 20px;
+    border: 7px solid transparent;
+    border-radius: 20px;
+}
+
+button:hover {
+    background-color: rgba(228, 85, 168, 0.712);
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 850px){
+    .box{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+    }
+    .home-dois-image{
+        display: none;
+    }
 }
