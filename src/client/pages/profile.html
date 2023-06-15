@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/src/client/styles/profile.css">
     <link rel="stylesheet" type="text/css" href="/src/client/styles/navbar.css">
-    <title>Discover Anime</title>
+    <title>Recomendação Anime</title>
 </head>
 <body>
     <header>
@@ -20,34 +20,33 @@
                 <div class="line3"></div>
             </div>
             <ul class="nav-list">
-                <li><span id="usernameIdentification">Yo, user_name</span></li>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/src/client/pages/configurations.html">Account informations</a></li>
-                <li><a href="profile.html">Discover Anime</a></li>
-                <li><a href="/src/client/pages/about.html">About the project</a></li>
-                <li><button class="bt-logof" onclick="quit()"><a href="/index.html">Log off</a></button></li>
+                <li><span id="usernameIdentification">Olá, user_name</span></li>
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="/src/client/pages/about.html">Sobre</a></li>
+                <li><a href="/src/client/pages/configurations.html">Segurança</a></li>                
+                <li><button class="bt-logof" onclick="quit()"><a href="/index.html">Sair</a></button></li>
             </ul>
         </nav>
     </header>
     <section class="conteiner">
         <div class="box-main">
             <div class="input-box">
-                <span>Insert view Anime</span>
+                <span>Insira o nome do Anime </span>
                 <input type="text" id="inputtedAnime">
-                <button onclick="searchRecommendation()">Search Recommendation</button>
+                <button onclick="searchRecommendation()">Buscar recomendação</button>
             </div>
             <div class="output-box">
-                <span>The Anime recommended</span>
+                <span>Anime recomendado</span>
                 <input type="text" id="outputtedAnime" readonly>
-                <button id="copyContentButton" onclick="copyContent()">Copy</button>
+                <button id="copyContentButton" onclick="copyContent()">Copie</button>
                 </br>
-                <span>Genre</span>
+                <span>Gênero</span>
                 <input type="text" id="animeGenre" readonly>
                 </br>
-                <span>Episodes</span>
+                <span>Episódio</span>
                 <input type="text" id="animeEpisodes" readonly>
                 </br>
-                <span>Duration</span>
+                <span>Duração</span>
                 <input type="text" id="animeEpDuration" readonly>
             </div>
             <br>

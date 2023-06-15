@@ -13,6 +13,11 @@ body{
     font-family:'Computer Says No', Arial, sans-serif;
     font-size: 157%;
 }
+.nav-list li button{
+    margin-top: -2vh;
+    font-size: 107%;
+    background-color:rgba(228, 85, 168, 0);
+}
 a{
    text-decoration: none;
    transition: 0.5s ease;

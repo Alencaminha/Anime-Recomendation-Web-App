@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/src/client/styles/configurations.css">
     <link rel="stylesheet" type="text/css" href="/src/client/styles/navbar.css">
     
-    <title>Account informations</title>
+    <title>Segurança</title>
 </head>
 <body>
     <header>
@@ -22,29 +22,30 @@
                 <div class="line3"></div>
              </div>
             <ul class="nav-list">
-                <li><a href="/index.html"> Home</a></li>
-                <li><a href="/src/client/pages/configurations.html">Account informations</a></li>
-                <li><a href="profile.html">Discover Anime</a></li>
-                <li><a href="/src/client/pages/about.html">About the project</a></li>
+                <li><span id="usernameIdentification">Olá, user_name</span></li>
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="profile.html">Recomendação</a></li>
+                <li><a href="/src/client/pages/about.html">Sobre</a></li>
+                <li><button class="bt-logof" onclick="quit()"><a href="/index.html">Sair</a></button></li>
             </ul>
         </nav>
     </header>
     <section class="box">
     </br>
         <div class="title">
-            <p>SECURITY - Change password</p>
+            <p>Segurança - Configuração da conta</p>
         </div>
         <div class="alterar-dados">
-            <p><input type="text" id="altUsername" placeholder="New username">
-            <button onclick="alterUserData('username', document.getElementById('altUsername'))">Change Name</button></p>
+            <p><input type="text" id="altUsername" placeholder="Novo nome de usuário">
+            <button onclick="alterUserData('username', document.getElementById('altUsername'))">Alterar Nome</button></p>
             </br>
-            <p><input type="text" id="altEmail" placeholder="New e-mail">
-            <button onclick="alterUserData('email', document.getElementById('altEmail'))">Change E-mail</button></p>
+            <p><input type="text" id="altEmail" placeholder="Novo e-mail do usuário">
+            <button onclick="alterUserData('email', document.getElementById('altEmail'))">Alterar E-mail</button></p>
             </br>
-            <p><input type="password" id="altPassword" placeholder="New password">
-            <button onclick="alterUserData('password', document.getElementById('altPassword'))">Change password</button></p>
+            <p><input type="password" id="altPassword" placeholder="Nova senha do usuário">
+            <button onclick="alterUserData('password', document.getElementById('altPassword'))">Alterar senha</button></p>
             </br>
-            <button id="deleteUserButton" onclick="deleteAccount()">Delete Account</button>
+            <button id="deleteUserButton" onclick="deleteAccount()">Deletar conta</button>
         </div>
     </br>
     </section>

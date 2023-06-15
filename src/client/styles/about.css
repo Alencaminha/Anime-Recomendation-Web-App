@@ -9,7 +9,11 @@ body{
     font-size: 242%;
     margin: 3.5rem; 
 }
-
+.nav-list li button{
+    margin-top: -2vh;
+    font-size: 107%;
+    background-color:rgba(228, 85, 168, 0);
+}
 .about-project{
     font-family:'Computer Says No', Arial, sans-serif;
     display: flex;
