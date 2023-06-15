@@ -7,7 +7,7 @@ window.onload = () => {
 quit = () => {
     sessionStorage.setItem("loggedUserId", null);
 }
-
+ 
 window.onload = () => {
     fetch("http://localhost:3000/readuser", {
         method: "POST",
