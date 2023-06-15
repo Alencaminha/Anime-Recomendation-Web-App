@@ -18,10 +18,7 @@ signUp = () => {
     })
     .then(res => res.json())
     .then(data => {
-        console.log(data);
-        if (data.statusCode == 200) {
-            window.location.href = "login.html";
-        }
+        alert("Status code: " + data.statusCode);
     });
 }
 
