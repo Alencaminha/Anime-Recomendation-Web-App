@@ -13,18 +13,17 @@
         <nav class="nav-bar">
             <div class="logo">
                <img class="img-logo" src="/img/main-logo.png" alt="Logo do site onde pode-se ler Views Anime na cor preta">
-             </div> 
+             </div>
              <div class="mobile-menu">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
              </div>
             <ul class="nav-list">
-                <li><span id="usernameIdentification">Olá, user_name</span></li>
-                <li><a href="/index.html">Início</a></li>
-                <li><a href="/src/client/pages/configurations.html">Segurança</a></li>
-                <li><a href="profile.html">Recomendação</a></li>
-                <li><button class="bt-logof" onclick="quit()"><a href="/index.html">Sair</a></button></li>
+                <li><a href="/index.html"> Home</a></li>
+                <li><a href="/src/client/pages/configurations.html">Account informations</a></li>
+                <li><a href="profile.html">Discover Anime</a></li>
+                <li><a href="/src/client/pages/about.html">About the project</a></li>
             </ul>
         </nav>
     </header>
@@ -33,35 +32,29 @@
         <img class="about-img-mobile" src="/img/Sakura.PNG">
     </div>
     <div class="title">
-        <p>SOBRE</p>
+        <p>SOBRE O PROJETO</p>
     </div>
     <div class="about-project">
         <div class="about-work">
-            <p class="preview-project">Este trabalho tem como objetivo realizar a aplicação de CRUD 
-            (Create, Read, Update e Delete) que é um acrônimo para as maneiras de se operar informação armazenada 
-            em banco de dados. Além da aplicação de usuabilidade para Website e Mobile, tornando a  experiência
-            do usuário mais simples, intuitiva e agil ao navegar pelas cinco telas proposta neste trabalho. Utilizando
-            na elaborado no projeto o MySQL, juntamente como a <span><a href="https://jikan.moe/">API Jika - Myanimelist.</a></span><br>
-            O site propõe recomendação de anime ao usuário assistir, com base animes favorito
-            sinalizado pelo usuário na hora da consulta.<br>            
+            <p class="preview-project">Este trabalho teve como objetivo criar uma aplicação com um CRUD e utilizar uma API Rest externa.
+                Para isto foi utilizado o Node.js com o Express para criar um backend com APIs que façam conexão com o banco de dados escrito
+                em SQLite, além da API Jikan, a maior Rest API de animes do mundo, que conta com todo o conteúdo do site My Anime List. A aplicação
+                permite que o usuário insira um anime que já assistiu e recebe uma recomendação de um anime relacionado, assim como algumas informações
+                e imagem sobre o mesmo.
             </p>
             <br>
-            <ul class="prepared-by">
+            <div class="prepared-by">
                 Alexandre Nascimento Caminha - 125111370334<br>
                 Fernanda Beatriz Leme Bergoci - 125111367122<br>
-                Gabriel Cardoso Martins -  <br>
+                Gabriel Cardoso Martins - 125111135823<br>
                 Karina de Oliveira Matiolli - 125111355232<br>
                 Lucas Felinto Queiroz da Costa - 125111377173<br>
-            </ul>
+            </div>
         </div>
         <div class="about-image">
             <img class="about-img" src="/img/Sakura.PNG">
         </div>
     </div>
-    </main>
-    <footer>
-
-    </footer>
     <script src="/src/client/scripts/session.js"></script>
     <script src="/src/client/scripts/mobile_navbar.js"></script>
 </body>

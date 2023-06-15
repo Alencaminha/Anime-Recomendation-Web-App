@@ -1,4 +1,5 @@
 window.onload = () => {
+<<<<<<< HEAD
     fetch("http://localhost:3000/readuser", {
         method: "POST",
         headers: {
@@ -18,3 +19,13 @@ window.onload = () => {
         .then(data => {document.getElementById("inputtedAnime").value = data.data.title_english});
     });
 }
+=======
+    if (sessionStorage.getItem("loggedUserId") == null) {
+        window.location.href = "login.html";
+    }
+}
+
+quit = () => {
+    sessionStorage.setItem("loggedUserId", null);
+}
+>>>>>>> 096dc6f18ef45ee8aee79c00bfa7c8e971a4aae9
