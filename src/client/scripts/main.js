@@ -73,10 +73,8 @@ updateUser = (fieldToChange, newValue) => {
 }
 
 copyContent = () => {
-    document.getElementById("outputtedAnime").select();
+    let copyText = document.getElementById("outputtedAnime");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(copyText.value);
-}
-
-quit = () => {
-    sessionStorage.setItem("loggedUserId", null);
 }
