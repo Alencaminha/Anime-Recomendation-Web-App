@@ -50,18 +50,16 @@ button:hover {
     display: flex;
     flex-direction: column;
     border-radius: 15px;
-    margin-right: 50%;
-    margin-left: 2%;
-    margin: 70px;
-    
+    margin: 15px;
+    margin-right: 75%;
+    margin-left: 27%;
 }
 .gif-config .gif-img{
     background-size:cover;
-    margin: -150px;
+    margin: 10px;
     margin-right: 2%;
     width: 90vh;
     border-radius: 10px;
-    margin-left: 50%;
 }
 
 @media (max-width: 850px){
