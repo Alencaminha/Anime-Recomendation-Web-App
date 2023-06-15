@@ -36,7 +36,7 @@ deleteAccount = () => {
         .then(data => {
             console.log(data);
             sessionStorage.setItem("loggedUserId", null);
-            window.location.href = "index.html";
+            window.location.href = "/index.html";
         });
     }
 }
